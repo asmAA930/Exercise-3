@@ -1,0 +1,81 @@
+.exercise_1 .box {
+    width: 300px;
+
+    /* using position & transform to centr box (height , width) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* -************************* */
+    overflow: hidden;
+}
+
+.exercise_1 .box img {
+    /* display: block; ====> Removes the small space below the image caused by its default inline behavior. */
+    display: block;
+    width: 100%;
+    transition-duration: 2s;
+    transition-delay: 2s;
+}
+
+.exercise_1 .box:hover img {
+    scale: 1.2;
+}
+
+.exercise_1 .box .layout {
+    height: 100%;
+    background-color: #2a3f55b3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    /* Using display: none; then display: block; on hover
+   prevents the transition from working because display is not an animatable property. */
+
+    transition: 2s;
+    overflow: hidden;
+
+}
+
+.exercise_1 .box:hover .layout {
+    opacity: 1;
+    transform: rotate(360deg);
+}
+
+.exercise_1 .box .layout h2 {
+    background-color: #2A3F55;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.exercise_1 .box .layout p {
+    padding: 15px;
+    text-align: center;
+}
+
+.exercise_1 .box .layout h2,
+.exercise_1 .box .layout p {
+    /* position: relative;
+    left: 100%;          equal effect >> transform: translateX(100%) */
+    transform: translateX(100%);
+}
+
+.exercise_1 .box:hover .layout h2,
+.exercise_1 .box:hover .layout p {
+    /* left: 0; */
+    transform: translateX(0);
+    transition-duration: 2s;
+}
+
+.exercise_1 .box:hover .layout h2 {
+    transition-delay: 4s;
+}
+
+.exercise_1 .box:hover .layout p {
+    transition-delay: 5s;
+}
+
+

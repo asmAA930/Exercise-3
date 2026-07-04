@@ -1,0 +1,167 @@
+.exercise_2 .box {
+    /* background-color: #fe0000; */
+    width: 300px;
+    height: 400px;
+    /* using position & transform to center box (height , width) */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* -************************* */
+    overflow: hidden;
+}
+
+/* ******************************************************* start front ********** */
+.exercise_2 .box .front {
+    position: absolute;
+    top: 0;
+}
+
+.exercise_2 .box .front img {
+    /* display: block; ====> Removes the small space below the image caused by its default inline behavior. */
+    display: block;
+    width: 100%;
+    backface-visibility: hidden;
+    transition-duration: 2s;
+}
+
+.exercise_2 .box:hover .front img {
+    transform: rotateY(180deg);
+}
+
+/* ******************************************************* end front ********** */
+
+/* ******************************************************* start back ********** */
+
+.exercise_2 .box .back{
+    width:100%;
+    height:100%;
+
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.exercise_2 .box .back .layer1 {
+    display: block;
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: 2s;
+}
+
+.exercise_2 .box:hover .back .layer1 {
+    transform: rotateY(0deg);
+}
+
+/* ****************************************** */
+
+.exercise_2 .box .back .layer2 {
+    background-color: #697888;
+
+    position: absolute;
+    top: 0;
+    
+    z-index: -1;
+
+    opacity: 0;
+
+    height: 100%;
+    width: 100%;
+
+    transform: scale(0);
+    overflow: hidden;
+
+    border-radius: 200px;
+}
+
+.exercise_2 .box:hover .back .layer2 {
+    z-index: 1;
+    opacity: 1;
+    transform: scale(1);
+    border-radius: 0;
+    transition: 2s 2s;
+}
+
+/* ************************************************* */
+
+.exercise_2 .box .back .layer2 h2 {
+    background-color: #2A3F55;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.exercise_2 .box .back .layer2 h2,
+.exercise_2 .box .back .layer2>p {
+    padding: 15px;
+    text-align: center;
+    transform: translateX(100%);
+}
+
+.exercise_2 .box:hover .back .layer2 h2,
+.exercise_2 .box:hover .back .layer2>p {
+    transform: translateX(0);
+}
+
+.exercise_2 .box:hover .back .layer2 h2 {
+    transition: 2s 4s;
+}
+
+.exercise_2 .box:hover .back .layer2>p {
+    transition: 2s 5s;
+}
+
+/* *************************************************** */
+.exercise_2 .box .back .layer2 h3 {
+    margin-top: 15px;
+    margin-inline: auto;
+    width: fit-content;
+    color: #18ED49;
+    transform: scale(0);
+}
+
+.exercise_2 .box:hover .back .layer2 h3 {
+    transform: scale(1);
+    transition: 2s 6s;
+}
+
+.exercise_2 .box .back .layer2 .skills {
+    overflow: auto;
+    margin: 10px;
+}
+
+.exercise_2 .box .back .layer2 .skills p {
+    margin: 7%;
+    padding: 10px 30px;
+    float: left;
+    background-color: #18ED49;
+    transform: scale(0);
+}
+
+.exercise_2 .box:hover .back .layer2 .skills p {
+    transform: scale(1);
+    transition-duration: 1.5s;
+}
+
+.exercise_2 .box:hover .back .layer2 .skills :nth-of-type(1) {
+    transition-delay: 8s;
+}
+
+.exercise_2 .box:hover .back .layer2 .skills :nth-of-type(2) {
+    transition-delay: 8.5s;
+}
+
+.exercise_2 .box:hover .back .layer2 .skills :nth-of-type(3) {
+    transition-delay: 9s;
+}
+
+.exercise_2 .box:hover .back .layer2 .skills :nth-of-type(4) {
+    transition-delay: 9.5s;
+}
+
+/* ******************************************************* end back ********** */
+
