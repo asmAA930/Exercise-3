@@ -64,10 +64,6 @@
 
     position: absolute;
     top: 0;
-    
-    z-index: -1;
-
-    opacity: 0;
 
     height: 100%;
     width: 100%;
@@ -79,8 +75,7 @@
 }
 
 .exercise_2 .box:hover .back .layer2 {
-    z-index: 1;
-    opacity: 1;
+
     transform: scale(1);
     border-radius: 0;
     transition: 2s 2s;
@@ -99,7 +94,7 @@
 .exercise_2 .box .back .layer2>p {
     padding: 15px;
     text-align: center;
-    transform: translateX(100%);
+    transform: translateX(110%);
 }
 
 .exercise_2 .box:hover .back .layer2 h2,
