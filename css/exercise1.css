@@ -35,12 +35,18 @@
 
     transition: 2s;
     overflow: hidden;
-
 }
 
 .exercise_1 .box:hover .layout {
     opacity: 1;
     transform: rotate(360deg);
+}
+
+.exercise_1 .box .layout h2,
+.exercise_1 .box .layout p {
+    /* position: relative;
+    left: 100%;          equal effect >> transform: translateX(100%) */
+    transform: translateX(100%);
 }
 
 .exercise_1 .box .layout h2 {
@@ -54,13 +60,6 @@
 .exercise_1 .box .layout p {
     padding: 15px;
     text-align: center;
-}
-
-.exercise_1 .box .layout h2,
-.exercise_1 .box .layout p {
-    /* position: relative;
-    left: 100%;          equal effect >> transform: translateX(100%) */
-    transform: translateX(100%);
 }
 
 .exercise_1 .box:hover .layout h2,
