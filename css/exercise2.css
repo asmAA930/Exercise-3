@@ -83,18 +83,17 @@
 
 /* ************************************************* */
 
-.exercise_2 .box .back .layer2 h2 {
-    background-color: #2A3F55;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-
 .exercise_2 .box .back .layer2 h2,
 .exercise_2 .box .back .layer2>p {
     padding: 15px;
     text-align: center;
     transform: translateX(110%);
+}
+
+.exercise_2 .box .back .layer2 h2 {
+    background-color: #2A3F55;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .exercise_2 .box:hover .back .layer2 h2,
@@ -142,19 +141,19 @@
     transition-duration: 1.5s;
 }
 
-.exercise_2 .box:hover .back .layer2 .skills :nth-of-type(1) {
+.exercise_2 .box:hover .back .layer2 .skills p:nth-of-type(1) {
     transition-delay: 8s;
 }
 
-.exercise_2 .box:hover .back .layer2 .skills :nth-of-type(2) {
+.exercise_2 .box:hover .back .layer2 .skills p:nth-of-type(2) {
     transition-delay: 8.5s;
 }
 
-.exercise_2 .box:hover .back .layer2 .skills :nth-of-type(3) {
+.exercise_2 .box:hover .back .layer2 .skills p:nth-of-type(3) {
     transition-delay: 9s;
 }
 
-.exercise_2 .box:hover .back .layer2 .skills :nth-of-type(4) {
+.exercise_2 .box:hover .back .layer2 .skills p:nth-of-type(4) {
     transition-delay: 9.5s;
 }
 
